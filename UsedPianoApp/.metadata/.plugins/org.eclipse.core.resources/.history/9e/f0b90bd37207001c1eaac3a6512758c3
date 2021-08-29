@@ -1,0 +1,99 @@
+package UsedPianoApp;
+
+import java.util.ArrayList;
+
+public class PianoOrder extends Instrument implements Order {
+
+	protected double downPayment; //from 30% to 100%
+	protected int loanDuration; //12 to 24 months
+	protected double interRate;
+	protected double loanBalance;
+	double taxPay;
+	
+	
+	
+	public String paymentSchedule(int dur, double intRate, 
+			double downPay, double price) {
+		String output = " ";
+		double downPayAmount = price * downPay/100;
+		double inBalance = 0;
+		inBalance = price - downPayAmount;
+		System.out.println("Initial balance " + inBalance);
+		double Principal = Math.round((inBalance/dur)*100.0)/100.0; //ROUND TO TWO DECIMAL POINTS 
+		
+		System.out.println("Principal: " + Principal);
+		double paymentMonth=0;
+		double monthInterestRate=0;
+		//double interestAccumulated  = intRate / dur;
+		double interestAccumulated =0;
+		double LoanBalance = inBalance;
+		//intRate = intRate/100;
+		monthInterestRate = intRate/dur;
+		for(int i =0; i<dur; i++) {
+			
+			interestAccumulated = LoanBalance * monthInterestRate;
+			System.out.println("\nInterest accumulated: "  + interestAccumulated);
+			paymentMonth = 	Principal + interestAccumulated;
+			LoanBalance = Math.round(((LoanBalance - Principal)*100.0)/100.0);
+			output += "\nLoan payment for the " + (i+1) + " month is " + 	paymentMonth + "\tLoan balance for this month is " + LoanBalance;
+			
+			/*monthInterestRate = (inBalance - (i*Principal))* interestAccumulated;
+			paymentMonth = Principal + monthInterestRate;
+			loanBalance = price - paymentMonth;
+			//System.out.println("Month: " + (i+1) + "   Payment: $" + paymentMonth);
+			output += "\n" + paymentMonth;*/
+			
+		}
+		return output;
+	}
+	/*public static String paymentSchedule(double downPayment, int loanDuration) {
+		double principalPaid = downPayment/loanDuration;
+		double monthlyPayment=0;
+		//ArrayList<String> monthPay = new ArrayList<>();
+		//System.out.println(principalPaid);
+		String output = "";
+		for(int i=0;i<loanDuration;i++) {
+			double balance = downPayment - monthlyPayment;
+			double interest = balance*(TAXRATE/12);
+             //System.out.println(interest);
+			//System.out.println(balance);
+			monthlyPayment = (principalPaid) + interest;
+		     output +=  "month " +(i+1) + " payment is "+monthlyPayment+"\n";
+		}
+		
+		return output;
+	}*/
+	
+	
+	
+	
+	
+	
+
+	public double saleTax(int tax, double price) {
+		return taxPay = tax * price; 
+		
+	}
+	
+	
+	
+	@Override
+	public double totalPrice() {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+
+
+
+
+
+
+	@Override
+	public double saleTax() {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+	
+	
+}

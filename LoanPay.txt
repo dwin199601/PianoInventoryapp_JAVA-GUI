@@ -1,0 +1,28 @@
+
+Initial price for the item: $10900.0
+Left price after paying down payment: $7630.0
+
+Loan payment for the 1 month is $329.05	Loan balance for this month is $ 7312.08
+Loan payment for the 2 month is $328.58	Loan balance for this month is $ 6994.16
+Loan payment for the 3 month is $328.12	Loan balance for this month is $ 6676.24
+Loan payment for the 4 month is $327.66	Loan balance for this month is $ 6358.32
+Loan payment for the 5 month is $327.19	Loan balance for this month is $ 6040.4
+Loan payment for the 6 month is $326.73	Loan balance for this month is $ 5722.48
+Loan payment for the 7 month is $326.27	Loan balance for this month is $ 5404.56
+Loan payment for the 8 month is $325.8	Loan balance for this month is $ 5086.64
+Loan payment for the 9 month is $325.34	Loan balance for this month is $ 4768.72
+Loan payment for the 10 month is $324.87	Loan balance for this month is $ 4450.8
+Loan payment for the 11 month is $324.41	Loan balance for this month is $ 4132.88
+Loan payment for the 12 month is $323.95	Loan balance for this month is $ 3814.96
+Loan payment for the 13 month is $323.48	Loan balance for this month is $ 3497.04
+Loan payment for the 14 month is $323.02	Loan balance for this month is $ 3179.12
+Loan payment for the 15 month is $322.56	Loan balance for this month is $ 2861.2
+Loan payment for the 16 month is $322.09	Loan balance for this month is $ 2543.28
+Loan payment for the 17 month is $321.63	Loan balance for this month is $ 2225.36
+Loan payment for the 18 month is $321.17	Loan balance for this month is $ 1907.44
+Loan payment for the 19 month is $320.7	Loan balance for this month is $ 1589.52
+Loan payment for the 20 month is $320.24	Loan balance for this month is $ 1271.6
+Loan payment for the 21 month is $319.77	Loan balance for this month is $ 953.68
+Loan payment for the 22 month is $319.31	Loan balance for this month is $ 635.76
+Loan payment for the 23 month is $318.85	Loan balance for this month is $ 317.84
+Loan payment for the 24 month is $318.38	Loan balance for this month is $ -0.08

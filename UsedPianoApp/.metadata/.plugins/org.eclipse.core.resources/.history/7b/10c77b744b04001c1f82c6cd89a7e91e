@@ -1,0 +1,66 @@
+package UsedPianoApp;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
+import java.util.ArrayList;
+
+public class PianoDBmanager {
+	
+    public final static String DB_URL = "jdbc:derby:PianoDB";
+    
+    public static ArrayList<String> getProd() throws SQLException {
+		
+		Connection conn = DriverManager.getConnection(DB_URL);
+		conn = DriverManager.getConnection(DB_URL);
+		
+		Statement stmt = conn.createStatement( ResultSet.TYPE_SCROLL_SENSITIVE,
+                ResultSet.CONCUR_READ_ONLY);
+	
+		String quary = "SELECT ProdID, Brand, Model, Price, ManufacturedYear FROM PIANO";
+		ResultSet resultSet = stmt.executeQuery(quary);
+		ArrayList<String> Prod = new ArrayList<>();
+		
+		/*while(resultSet.next()) {
+			int  prodId = resultSet.getInt(0);
+			String productBrand = resultSet.getString(1);
+			String productModel = resultSet.getString(2);
+			double productPrice = resultSet.getDouble(3);
+			int productManYear = resultSet.getInt(4);
+			
+			
+			String prodIDstring = String.valueOf(prodId);
+			String productPriceString = String.valueOf(productPrice);
+			String productManYearString = String.valueOf(productManYear);
+			
+			
+		}*/
+		
+		
+		//resultSet.last();
+		//int numRows = resultSet.getRow(); 
+		//resultSet.first();
+		
+		
+		for(int i =0; i<Prod.size(); i++) {
+			
+			Prod.add(resultSet.getString(1));
+			
+			
+			resultSet.next();
+			
+		}
+		
+		conn.close();
+		stmt.close();
+		System.out.println(Prod);
+		
+		return Prod;
+	}
+
+
+
+
+}
